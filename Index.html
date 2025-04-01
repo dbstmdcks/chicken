@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘의 치킨종류는?</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: 2rem;
+            margin-top: 20%;
+        }
+    </style>
+</head>
+<body>
+    <p id="message">🔮 오늘 먹을 치킨종류는?🔮</p>
+    <button onclick="showRandomMessage()">눌러서 확인하기</button>
+
+    <script>
+        function showRandomMessage() {
+            const messages = [
+                "BHC 뿌링클",
+                "굽네치킨 고추바사삭",
+                "지코바 숯불양념치킨",
+                "교촌 허니콤보",
+                "BBQ 황금올리브치킨",
+		"멕시카나 땡초치킨",
+		"처갓집 양념치킨",
+		"노랑통닭 깐풍치킨"
+            ];
+            document.getElementById("message").innerText = messages[Math.floor(Math.random() * messages.length)];
+        }
+    </script>
+</body>
+</html>
